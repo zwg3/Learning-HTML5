@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Lab-1-4</title>
+</head>
+<body>
+    <script>
+        function NewClass() {
+            this.title = document.title;
+            this.url = "test value";
+            this.show = function () {document.write(this.title + "<br>", this.url) }
+        }
+        var aClass = new NewClass()
+        aClass.show();
+    </script>
+
+</body>
+</html>
