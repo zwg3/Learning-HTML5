@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+
+<body>
+    <script>
+        let clickCount = 0;
+        function resize(img)
+        {
+            if (clickCount == 0) {
+                img.height *= 2;
+                img.width *= 2;
+                clickCount++;
+            }
+            else {
+                img.height /= 2;
+                img.width /= 2;
+                clickCount--;
+            }
+
+        }
+    </script>
+    <img onclick="resize(this)" src="test.jpg" alt="test image" width="256" height="256">
+</body>
+</html>
