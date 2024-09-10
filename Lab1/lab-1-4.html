@@ -4,17 +4,14 @@
 <head>
     <meta charset="utf-8" />
     <title>Lab-1-4</title>
+    <script type="text/javascript" src="jScripts.js"></script>
 </head>
 <body>
     <script>
-        function NewClass() {
-            this.title = document.title;
-            this.url = "test value";
-            this.show = function () {document.write(this.title + "<br>", this.url) }
-        }
-        var aClass = new NewClass()
-        aClass.show();
+        (function () {
+            const newClass = new createClass();
+            newClass.show();
+        })()          
     </script>
-
 </body>
 </html>

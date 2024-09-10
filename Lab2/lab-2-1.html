@@ -4,26 +4,9 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <script type="text/javascript" src="jScripts.js"></script>
 </head>
-
-<body>
-    <script>
-        let clickCount = 0;
-        function resize(img)
-        {
-            if (clickCount == 0) {
-                img.height *= 2;
-                img.width *= 2;
-                clickCount++;
-            }
-            else {
-                img.height /= 2;
-                img.width /= 2;
-                clickCount--;
-            }
-
-        }
-    </script>
-    <img onclick="resize(this)" src="test.jpg" alt="test image" width="256" height="256">
+<body onload="(function () { resize('test'); })()">
+    <img src="test.jpg" alt="test image" width="256" height="256" id="test">
 </body>
 </html>

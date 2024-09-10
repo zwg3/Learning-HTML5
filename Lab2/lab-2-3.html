@@ -4,17 +4,9 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
+    <script type="text/javascript" src="jScripts.js"></script>
 </head>
-
-
-<body>
-    <script>
-        function openWindow() {
-
-            var win = window.open("/", "", "toolbar=yes, resizable=yes, status=yes, width=300, height=400");
-        }
-    </script>
-    <a onclick="openWindow()">Новое окно</a>
-
+<body onload="(function () {opener('test'); })()">
+    <a id="test">Новое окно</a>
 </body>
 </html>
