@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <script src="app.js"></script>
+    <script src="modernizr.js"></script>
+    <title>Lab-4-1</title>
+</head>
+<body>
+    <script>
+        if (Modernizr.canvas) {
+            document.write('<canvas id="canva" width="500" height="350"></canvas>');
+            (function () { drawGrad('canva'); })()
+        }
+        else { document.write('Canvas feature is not supported on your current browser version!') }
+    </script>
+
+</body>
+</html>
