@@ -20,6 +20,7 @@ function resize(id) {
 function opener(id) {
     "use strict";
     let elem = document.getElementById(id);
+    let params = "scrollbars = no, resizable = yes, status = yes, location = yes, toolbar = yes, menubar = yes, width = 300, height = 400";
     elem.addEventListener("click", win);
-    function win() { window.open('', '', 'toolbar=yes,resizable=yes, status=yes, width=300, height=400'); }
+    function win() { window.open('', '', params); }
 }
