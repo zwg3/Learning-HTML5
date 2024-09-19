@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <style type="text/css">
+        input {
+            margin: 10px;
+        }
+    </style>
+    <script src="app.js"></script>
+    <title>Lab 5-1</title>
+</head>
+<body>
+    <p>Пожалуйста, заполните обязательные поля</p>
+    <form id="theForm">
+        <label>Имя</label>
+        <input id="name" type="text" required />
+        <img id="nameIcon" src="no.jpeg" />
+        <br />
+        <label>Возраст</label>
+        <input id="age" type="number" />
+        <img id="ageIcon" src="yes.jpeg" />
+        <br />
+        <label>E-mail</label>
+        <input id="email" type="email" required />
+        <img id="emailIcon" src="no.jpeg" />
+        <br />
+        <label>Сайт</label>
+        <input id="url" type="url" />
+        <img id="urlIcon" src="yes.jpeg" />
+        <br />
+        <input type="submit" value="Отправить"/>
+        <script>
+            (function () { setIcon('name', 'nameIcon') }());
+            (function () { setIcon('email', 'emailIcon') }());
+        </script>
+        <br />
+    </form>
+</body>
+</html>

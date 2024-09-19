@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <style type="text/css">
+        input {
+            margin: 10px;
+        }
+    </style>
+    <script src="app.js"></script>
+    <script src="modernizr.js"></script>
+    <script>window.onload = alertIfNoLocalStorage();</script>
+    <title>Lab 5-2</title>
+</head>
+<body onload="(function () { update();})()">
+    <h3>Address book</h3>
+    <label>Name</label>
+    <br />
+    <input id="iName" type="text" />
+    <br />
+    <label>Phone number</label>
+    <br />
+    <input id="iPhone" type="text" />
+    <br />
+    <input id="sub" type="submit" value="Add a new entry" onclick="(function () { save(); })()" />
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Phone number</th>
+            </tr>
+        </thead>
+        <tbody id="tBody">
+            <tr>
+                <td colspan="2">Empty</td>
+            </tr>
+        </tbody>
+    </table>
+    <br />
+
+</body>
+</html>
