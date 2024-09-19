@@ -15,12 +15,14 @@ function setIcon(input_id, img_id) {
 }
 
 function alertIfNoLocalStorage() {
+    "use strict"
     if (!Modernizr.localstorage) {
         alert("Local storage is not supported on your current version of browser! The page content might display incorrectly.");
     };
 }
 
 function update() {
+    "use strict"
     var tBody = document.getElementById("tBody")
     while (tBody.getElementsByTagName("tr").length > 0) {
         tBody.deleteRow(0);
@@ -47,13 +49,15 @@ function update() {
 }
 
 function save() {
+    "use strict"
     var key = document.getElementById('iName').value;
     var value = document.getElementById('iPhone').value;
     localStorage.setItem(key, value);
     update();
 }
 
-function deleteItem (key){
+function deleteItem(key) {
+    "use strict"
     localStorage.removeItem(key);
     update();
 }
