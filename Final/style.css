@@ -1,0 +1,54 @@
+nav {
+    background-origin: padding-box;
+    overflow: hidden;
+    background-color: hsl(50, 30%,50%);
+    border-radius: 10px;
+    box-shadow: 4px 4px black;
+    width: 45%;
+}
+nav a {
+    display: block;
+    color: white;
+    float: left;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+footer a {
+    margin-top: 10px;
+    display: block;
+    color: black;
+    float: left;
+    padding: 12px 12px;
+    text-decoration: none;
+    background-image: linear-gradient(hsl(40, 100%, 70%), hsl(30, 100%, 80%));
+    border-radius: 10px;
+    box-shadow: 4px 4px black;
+}
+
+.active {
+    background-color: #04AA6D;
+}
+
+a:hover:not(.active) {
+    background-color: hsl(20, 30%,50%);
+}
+
+footer a:hover:not(.active) {
+    background-image: linear-gradient(hsl(10, 100%, 70%), hsl(30, 100%, 80%));
+}
+
+body{
+    background-color: beige;
+}
+
+input {
+    margin: 5px;
+    width: 20%;
+    border-radius: 5px;
+}
+
+#dateLbl {
+    margin:5px;
+    font-size: 14px;
+}
+

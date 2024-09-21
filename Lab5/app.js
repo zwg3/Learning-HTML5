@@ -28,6 +28,9 @@ function update() {
         tBody.deleteRow(0);
     }
 
+    var tr;
+    var cell;
+
     if (localStorage.length == 0) {
         tr = tBody.insertRow(0);
         cell = tr.insertCell(0);
@@ -35,9 +38,9 @@ function update() {
         cell.innerHTML = "Nothing here";
     }
 
-    var tr;
 
-    for (var i = 0; i < localStorage.length; ++i) {        
+
+    for (var i = 0; i < localStorage.length; ++i) {       
         tr = tBody.insertRow(i);
         cell = tr.insertCell(0);
         cell.innerHTML = localStorage.key(i);

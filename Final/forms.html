@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+    <title>HTML5 web-forms demo</title>
+</head>
+<body>
+    <header>
+        <h3>This page demonstrates HTML5 web-form control capabilities</h3>
+    </header>
+    <article>
+        <section>
+            <form id="f1">
+                <input type="text" placeholder="This field is active on page load thanks to the autofocus attribute" autofocus /><br />
+                <input list="data" placeholder="Double-click this field to see the available options" /><br />
+                <datalist name="data" id="data">
+                    <option label="This is achieved" value="This is achieved"></option>
+                    <option label="using the list attribute" value="using the list attribute"></option>
+                    <option label="with the datalist field" value="with the datalist field"></option>
+                </datalist>
+                <input type="text" placeholder="The neighboring button allows for multiple file selection" />
+                <input type="file" multiple /> <br />
+                <input type="email" placeholder="This field will validate if the input is and e-mail adress or not" id="email" /><br />
+                <script>
+                    (function () {isValidColor('email')}());
+                </script>
+                <label id="dateLbl">This field allows you to select date via mouse action</label><br />
+                <input type="date"/>
+            </form>
+        </section>
+    </article>
+</body>
+</html>
