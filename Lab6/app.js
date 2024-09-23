@@ -15,9 +15,6 @@ function onSuccess(pos) {
     div1.insertAdjacentHTML('afterbegin',
                             '<p> Your current latitude: ' + pos.coords.latitude + '</p>\
                             <p> Your current longitude: ' + pos.coords.longitude + '</p>');
-    if (!pos.coords.accuracy === null) {
-        div1.insertAdjacentHTML('afterend', '<p> Your current altitude: ' + pos.coords.altitude + '</p>');
-    };
     div1.insertAdjacentHTML('afterend', '<p> Data accuracy: ~' + pos.coords.accuracy + ' meters</p>');
 }
 
