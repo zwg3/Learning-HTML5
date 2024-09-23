@@ -4,6 +4,9 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+    <script src="modernizr.js"></script>
+    <script>window.onload = alertIfNoLocalStorage();</script>
     <title>HTML5 web-storage demo</title>
 </head>
 <body>
@@ -12,7 +15,31 @@
     </header>
     <article>
         <section>
-            <p>stuff here</p>
+            <p>The local storage feature is used here to save data from both fields below and then store them locally.</p>
+            <label id="dataLbl">Field 1</label>
+            <br />
+            <input id="f1" type="text" />
+            <br />
+            <label id="dataLbl">Field 2</label>
+            <br />
+            <input id="f2" type="text" />
+            <br />
+            <input id="sub" type="submit" value="Add a new entry" onclick="(function () { save(); })()" />
+            <table>
+                <thead>
+                    <tr>
+                        <th>Field1</th>
+                        <th>Field2</th>
+                    </tr>
+                </thead>
+                <tbody id="tBody">
+                    <tr>
+                        <td colspan="2">Empty</td>
+                    </tr>
+                </tbody>
+            </table>
+            <br />
+            <button onclick="(function () { clearLocalStorage() }());">Clear storage</button>
         </section>
     </article>
 </body>

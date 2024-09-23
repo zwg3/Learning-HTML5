@@ -4,18 +4,17 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+    <script src="modernizr.js"></script>
     <title>HTML5 graphis demo</title>
 </head>
-<body>
+<body onload="(function () { canvDemo() })();">
     <header>
-        <h3>This page demonstrates HTML5 graphical capabilities utilizing canvas and SVG elements</h3>
+        <h3>This page demonstrates HTML5 graphical capabilities utilizing the canvas functionality.</h3>
     </header>
     <article>
         <section>
-            <p>Canvas stuff here</p>
-        </section>
-        <section>
-            <p>SVG stuff here</p>
+            <div id="canvasEx1"></div>
         </section>
     </article>
 </body>

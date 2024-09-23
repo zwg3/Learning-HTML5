@@ -4,7 +4,7 @@ nav {
     background-color: hsl(50, 30%,50%);
     border-radius: 10px;
     box-shadow: 4px 4px black;
-    width: 45%;
+    width: 28%;
 }
 nav a {
     display: block;
@@ -14,7 +14,6 @@ nav a {
     text-decoration: none;
 }
 footer a {
-    margin-top: 10px;
     display: block;
     color: black;
     float: left;
@@ -23,6 +22,7 @@ footer a {
     background-image: linear-gradient(hsl(40, 100%, 70%), hsl(30, 100%, 80%));
     border-radius: 10px;
     box-shadow: 4px 4px black;
+    overflow: hidden;
 }
 
 .active {
@@ -47,8 +47,49 @@ input {
     border-radius: 5px;
 }
 
-#dateLbl {
-    margin:5px;
+#dataLbl {
+    margin: 5px;
     font-size: 14px;
 }
 
+tr {
+    background-color: white;
+}
+
+table {
+    background-color: hsl(240, 100%, 95%);
+}
+
+#drop1, #drop2 {
+    border: 3px solid black;
+    width: 100px;
+    height: 200px;
+    float: left;
+    margin-right: 10px;
+    background-color: lightgray;
+}
+
+#item1, #item2, #item3 {
+    border: 2px solid black;
+    width: 50px;
+    height: 50px;
+    margin: 10px auto;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 40px;
+}
+
+#item1{
+    background-color: red;
+}
+#item2 {
+    background-color: green;
+}
+#item3 {
+    background-color: yellow;
+}
+#interactive {
+    float: left;
+    clear: left;
+    margin: 5px;
+}

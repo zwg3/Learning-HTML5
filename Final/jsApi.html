@@ -4,16 +4,31 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="style.css">
+    <script src="app.js"></script>
+    <script src="modernizr.js"></script>
     <title>HTML5 interactivity demo</title>
 </head>
 <body>
     <header>
         <h3>This page demonstrates HTML5 and JavaScript provided interactivity capabilities</h3>
-    </header>
-    <article>
+    </header>    
+    <div id="interactive">
+        <p id="dataLbl">The circle objects below are draggable. You can drop them inside either grey rectangle.</p>
+        <div id="drop1">
+            <div id="item1" draggable="true"></div>
+            <div id="item2" draggable="true"></div>
+        </div>
+        <div id="drop2">
+            <div id="item3" draggable="true"></div>
+            <script>(function () { drag(); }());</script>
+        </div>
+    </div>
+    <div id="interactive">
+        <p id="dataLbl">Click the button below to get your geographical coordinates.</p>
         <section>
-            <p>stuff here</p>
+            <button onclick="(function () { getCoords(); })()">Click me</button>
+            <div id="coords"></div>
         </section>
-    </article>
+    </div>
 </body>
 </html>
