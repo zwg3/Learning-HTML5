@@ -192,7 +192,7 @@ function getMap(coords) {
     var map = L.map('map').setView(coords, 15);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         maxZoom: 20,
-        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+        attribution: '<a href="http://www.openstreetmap.org/copyright"></a>'
     }).addTo(map);
 }
 
