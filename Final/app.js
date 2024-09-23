@@ -150,10 +150,11 @@ function getCoords() {
     "use strict";
     if (Modernizr.geolocation) {
         var pos = navigator.geolocation.getCurrentPosition(onSuccess, onError);
+        return pos;
     }
     else {
         alert("Geolocation feature is not supported by your current version of browser!")
-    }
+    }    
 }
 
 function onSuccess(pos) {
@@ -162,7 +163,9 @@ function onSuccess(pos) {
     div1.insertAdjacentHTML('afterbegin',
                             '<p> Your current latitude: ' + pos.coords.latitude + '</p>\
                              <p> Your current longitude: ' + pos.coords.longitude + '</p>');
-    div1.insertAdjacentHTML('afterend', '<p> Data accuracy: ~' + pos.coords.accuracy + ' meters</p>');
+    div1.insertAdjacentHTML('afterend', '<p> Data accuracy: ~' + pos.coords.accuracy + ' meters</p>\
+                             <label id="dataLbl">Approximated position on the map:</label>');
+    getMap([pos.coords.latitude, pos.coords.longitude]);
 }
 
 function onError(error) {
@@ -180,5 +183,33 @@ function onError(error) {
         case 3:
             alert("The browser timed out before retrieving the location.");
             break;
+    }
+}
+
+
+
+function getMap(coords) {
+    var map = L.map('map').setView(coords, 15);
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 20,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+}
+
+
+
+/*multimedia functions*/
+function loopToggle() {
+    var audio = document.getElementById('audio1');
+    var btn = document.getElementById('btnToggle');
+    if (audio.loop != true) {
+        audio.loop = true;
+        btn.innerHTML = "Loop On";
+        audio.load();
+    }
+    else {
+        audio.loop = false;
+        btn.innerHTML = "Loop Off";
+        audio.load();
     }
 }

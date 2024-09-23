@@ -3,6 +3,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
+    <script src="app.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>HTML5 multimedia demo</title>
 </head>
@@ -20,10 +21,11 @@
         </section>
         <section>
             <label id="dataLbl">Mp3 format audio files</label><br />
-            <audio controls>
+            <audio controls id="audio1">
                 <source src="audioSample.mp3" type="audio/mp3">
                 Your browser does not support the audio element.
-            </audio>
+            </audio><br />
+            <button id="btnToggle" onclick="(function () { loopToggle() })();">Toggle audio loop</button>
         </section>
     </article>
 </body>

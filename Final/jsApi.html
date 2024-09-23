@@ -4,6 +4,8 @@
 <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="leaflet/leaflet.css"/>
+    <script src="leaflet/leaflet.js"></script>
     <script src="app.js"></script>
     <script src="modernizr.js"></script>
     <title>HTML5 interactivity demo</title>
@@ -27,8 +29,10 @@
         <p id="dataLbl">Click the button below to get your geographical coordinates.</p>
         <section>
             <button onclick="(function () { getCoords(); })()">Click me</button>
-            <div id="coords"></div>
+            <div id="coords"></div><br />            
+            <div id="map"></div>
         </section>
     </div>
+
 </body>
 </html>
